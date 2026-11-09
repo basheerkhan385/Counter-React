@@ -1,17 +1,18 @@
-
+import { useState } from "react"
 function App() {
-  let count = 5
+  let [count , setCount] = useState(0)
 
   function increase(){
-    console.log("counter : " ,count)
-    return count++
+    // console.log("counter : " ,count)
+    return setCount(count + 1)
   }
 
 
   function decrease(){
-    console.log("counter : " ,count)
+    // console.log("counter : " ,count)
+    if (count === 0) return
 
-    return count--
+    return setCount(count - 1)
   }
 
   return (
